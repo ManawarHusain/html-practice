@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .static {
+        position: static;
+        border: 3px solid #73ad21;
+      }
+      .relative1 {
+        background-color: blueviolet;
+        position: relative;
+        left: 30px;
+        top: 30px;
+        z-index: 0;
+        border: 3px solid #73ad21;
+      }
+      .relative2 {
+        background-color: brown;
+        position: relative;
+        left: 30px;
+        top: 5px;
+        z-index: -2;
+        border: 3px solid #73ad21;
+      }
+      .relative3 {
+        background-color: chartreuse;
+        position: relative;
+        left: 30px;
+        top: -20px;
+        z-index: -1;
+        border: 3px solid #73ad21;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="static">Hello I am paragraph with position static</p>
+    <p class="relative1">Hello I am paragraph with position relative</p>
+    <p class="relative2">Hello I am paragraph with position relative</p>
+    <p class="relative3">Hello I am paragraph with position relative</p>
+
+    <p>Hello I am paragraph</p>
+  </body>
+</html>
