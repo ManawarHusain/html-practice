@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS website layout</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .header {
+                background-color: cadetblue;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: black;
+            }
+            .topnav a {
+                float: left;
+                display: block;
+                color: aqua;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .topnav a:hover {
+                background-color: aquamarine;
+                color: black;
+            }
+            .column {
+                float: left;
+                padding: 10px;
+            }
+            .column.side {
+                width: 25%;
+            }
+            .column.middle {
+                width: 50%;
+            }
+            .row::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and (max-width:600px) {
+                .column.side, .column.middle {
+                    width: 100%
+                }
+            }
+            .footer {
+                background-color:darkcyan;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+        <body>
+            <div class="header">
+                <h1>BOOKS</h1>
+            </div>
+            <div class="topnav">
+                <a href="#">BIOLOGY</a>
+                <a href="#">CHEMISTRY</a>
+                <a href="#">PHYSICS</a>
+                <a href="#">COMPUTER SCIENCE</a>
+                <a href="#">MATHS</a>
+            </div>
+            <div class="row">
+                <div class="column side">
+                  <h2>BIOLOGY</h2>
+                  <p> Biology is a branch of science that deals with living organisms and their vital processes. Biology encompasses diverse fields, including botany, conservation, ecology, evolution, genetics, marine biology, medicine, microbiology, molecular biology, physiology, and zoology.</p>
+                </div>
+                
+                <div class="column middle">
+                  <h2>CHEMISTRY</h2>
+                  <p>Chemistry is the scientific study of the properties and behavior of matter. It is a physical science within the natural sciences that studies the chemical elements that make up matter and compounds made of atoms, molecules and ions: their composition, structure, properties, behavior and the changes they undergo during reactions with other substances.</p>
+                </div>
+                
+                <div class="column side">
+                  <h2>PHYSICS</h2>
+                  <p>Physics is a branch of science that deals with the structure of matter and how the fundamental constituents of the universe interact. It studies objects ranging from the very small using quantum mechanics to the entire universe using general relativity.</p>
+                </div>
+              </div>
+              <div class="footer">
+                <p>NOTES</p>
+              </div>
+        </body>
+    </head>
+</html>
